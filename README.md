@@ -1,6 +1,6 @@
 # RsaCertificateGenerator
 
-## NOTE: I would recommend you to use the PowerShell method (method given below) if possible:
+## NOTE: I would recommend you to use the PowerShell method first (method given below), when possible:
 
 ### App Details:
 Generates .pfx files of RSA & ECDsa certificates.
