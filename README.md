@@ -2,6 +2,7 @@
 
 ## NOTE: I would recommend you to use the PowerShell method (method given below) if possible:
 
+### App Details:
 Generates .pfx files of RSA & ECDsa certificates.
 
 This project is created especially to be helpful for IdentityServer4.
