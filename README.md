@@ -8,13 +8,6 @@ This project is created especially to be helpful for IdentityServer4.
 
 Amendments will/can be made, as needed.
 
-
-Helpful sources:
-- https://damienbod.com/2020/02/10/create-certificates-for-identityserver4-signing-using-net-core/
-- https://www.youtube.com/watch?v=gnUM3cB3_co
-- https://docs.microsoft.com/en-us/archive/blogs/kaevans/using-powershell-with-certificates
-
-
 ### How to use this app:
 - Download the release.
 - Populate the `appsettings.json` file according to your need.
@@ -40,14 +33,9 @@ services
 
 ## Powershell Method:
 
-- New-SelfSignedCertificate Microsoft Docs:
-- https://docs.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate
-- To display all the properties and how to use -NotAfter parameter:
-- http://woshub.com/how-to-create-self-signed-certificate-with-powershell/
-- 
 - To generate a certificate, with a validity of 3 years:
 - $cert = New-SelfSignedCertificate -Subject "CN=WebApiNetCore" –NotAfter (Get-Date).AddYears(3) -CertStoreLocation cert:\CurrentUser\My -Provider "Microsoft Strong Cryptographic Provider"
-
+- 
 - 
 - To list all the certificates:
 - Get-ChildItem -Path cert:\CurrentUser\My
@@ -69,3 +57,12 @@ services
 -
 - Now use that variable in the export command:
 - Export-PfxCertificate -Cert $cert -Password $cert_pass -FilePath ".\cert.pfx"
+
+
+
+### Sources:
+- https://damienbod.com/2020/02/10/create-certificates-for-identityserver4-signing-using-net-core/
+- https://www.youtube.com/watch?v=gnUM3cB3_co
+- https://docs.microsoft.com/en-us/archive/blogs/kaevans/using-powershell-with-certificates
+- https://docs.microsoft.com/en-us/powershell/module/pki/new-selfsignedcertificate (New-SelfSignedCertificate Microsoft Docs)
+- http://woshub.com/how-to-create-self-signed-certificate-with-powershell (To display all the properties and how to use -NotAfter parameter)
