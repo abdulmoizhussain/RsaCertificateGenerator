@@ -1,6 +1,8 @@
 # RsaCertificateGenerator
 
-This project was created especially to be helpful for IdentityServer4.
+Generates .pfx files of RSA & ECDsa certificates.
+
+This project is created especially to be helpful for IdentityServer4.
 
 Amendments will/can be made, as needed.
 
