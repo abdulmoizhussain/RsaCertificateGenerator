@@ -11,9 +11,24 @@ Helpful sources:
 - https://docs.microsoft.com/en-us/archive/blogs/kaevans/using-powershell-with-certificates
 
 
+### How to use:
+- Download the release.
+- Populate the `appsettings.json` file according to your need.
+- Then execute the app to generate .pfx files.
+
+
+Usage for IdentityServer4 :
+
 ```javascript
 private System.Security.Cryptography.X509Certificates.X509Certificate2 GetCertificate()
 {
   return new System.Security.Cryptography.X509Certificates.X509Certificate2("./JwtCertificate/rsa_cert.pfx", Configuration["JwtCertificate:Password"]);
 }
+```
+
+```javascript
+services
+        .AddIdentityServer()
+        // ...
+        .AddSigningCredential(GetCertificate());
 ```
