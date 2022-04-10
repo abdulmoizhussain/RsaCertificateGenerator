@@ -1,6 +1,6 @@
-RsaCertificateGenerator
+# RsaCertificateGenerator
 
-This project was created specially to be helpful for IdentityServer4.
+This project was created especially to be helpful for IdentityServer4.
 
 Amendments will/can be made, as needed.
 
