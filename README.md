@@ -11,13 +11,13 @@ Helpful sources:
 - https://docs.microsoft.com/en-us/archive/blogs/kaevans/using-powershell-with-certificates
 
 
-### How to use:
+### How to use this app:
 - Download the release.
 - Populate the `appsettings.json` file according to your need.
 - Then execute the app to generate .pfx files.
 
 
-### Usage for IdentityServer4 :
+### How to utilize the generated certificates in IdentityServer4:
 
 ```javascript
 private System.Security.Cryptography.X509Certificates.X509Certificate2 GetCertificate()
